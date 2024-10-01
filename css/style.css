@@ -1935,6 +1935,16 @@ h1, h2, h3, h4, h5,
   margin: 1px;
 }
 
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img{
+  margin-bottom: 15px;
+  margin-top: 0;
+}
 
 
 /*=============Tela de Login=============*/
@@ -1955,10 +1965,6 @@ h1, h2, h3, h4, h5,
   max-width: 400px;
   width: 100%;
   border: 2px solid #0172afae; 
-}
-
-.logo img{
-  border-radius: 20px;
 }
 
 .input-area {
@@ -2091,98 +2097,78 @@ h1, h2, h3, h4, h5,
   }
 }
 
-/*=============Tela de Reserva=============*/
-
-.reservation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* Cartão de reserva */
-.reservation-card {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  max-width: 920pxpx;
-  width: 80%;
-  border: 2px solid #0172afae;
-}
-
-.logo img{
-  border-radius: 20px;
-}
-
-/* Título da reserva */
-.reservation-card h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-/* Estilo dos campos de input */
-.form-control {
-  border-radius: 25px;
-  padding: 12px 20px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  border: 1px solid #0172afae;
-  background-color: #fff;
-}
-
-/* Botão de confirmar reserva */
-.submit-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.reservar {
-  border-radius: 25px;
-  padding: 12px 20px;
-  width: 250px;
-  background-color: #0172af;
-  border-color: #0172afae; 
-  color: #ffff;
-  font-size: 16px;
-}
-
-.entrar:hover{
-  background-color: #0172afae;
-  border-color: #0172af; 
-}
-
-.payment-section {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.payment-section img {
-  height: 30px;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.payment-button {
-  border-radius: 25px;
-  padding: 12px 20px;
-  background-color: #0172af;
-  border: 1px solid #ffff;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-@media (max-width: 576px) {
-  .reservation-card {
+/*================================ Reserva ======================================*/
+  .reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
   }
-}
+
+  /* Cartão de reserva */
+  .reservation-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 920px;
+    width: 80%;
+    border: 2px solid #0172afae;
+  }
+
+  /* Título da reserva */
+  .reservation-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  /* Estilo dos campos de input */
+  .form-control {
+    border-radius: 25px;
+    padding: 12px 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border: 1px solid #0172afae;
+    background-color: #fff;
+  }
+
+  /* Botão de confirmar reserva */
+  .submit-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  form .submit-section, .payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reservar, .payment-btn {
+    border-radius: 25px;
+    padding: 12px 15px;
+    width: 250px;
+    background-color: #0172af;
+    border-color: #0172afae; 
+    color: #ffff;
+    font-size: 16px;
+  }
+
+  .reservar:hover, .payment-btn:hover {
+    background-color: #0172afae;
+    border-color: #0172af; 
+  }
+
+  .payment {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 576px) {
+    .reservation-card {
+      padding: 20px;
+    }
+  }

@@ -1,7 +1,4 @@
-/*!
- * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
+
 .fa,
 .fas,
 .far,
@@ -1734,8 +1731,6 @@ readers do not read off random characters that represent icons */
 .fa-font-awesome-flag:before {
   content: "\f425"; }
 
-.fa-font-awesome-logo-full:before {
-  content: "\f4e6"; }
 
 .fa-fonticons:before {
   content: "\f280"; }

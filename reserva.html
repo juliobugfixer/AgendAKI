@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Criar Reserva | AgendaAKI</title>
-    
     <!--==================== Links de fontes e estilo ====================-->
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
@@ -18,31 +16,66 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
     <!--==================== Seção de Reserva ====================-->
     <div class="reservation-container">
       <div class="reservation-card">
         <div class="logo mb-0 site-logo m-0 p-0">
-          <a href="#" class="mb-0">
+          <a href="#" class="mt-0">
             <img src="images/logo.png" alt="logo">
           </a>
         </div>
         <form action="#">
-          <input type="text" class="form-control" placeholder="Nome" required>
-          <input type="text" class="form-control" placeholder="Sobrenome" required>
-          <input type="email" class="form-control" placeholder="Email" required>
-          <input type="text" class="form-control" placeholder="Contacto" required>
-          
-    <!--==================== Pagamento ====================-->
-          <div class="payment-section">
-            <a href="https://www.paypal.com/" class="payment-button">
-              Pagar A Reserva
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Nome" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Sobrenome" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Contacto" required>
+            </div>
+            <div class="col-md-6">
+              <span>Data de início do evento</span>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <span>Data de fim do evento</span>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-12">
+              <div>
+                <select class="form-control">
+                  <option value="">Escolha o tipo de evento</option>
+                  <option value="">Festa de Aniversário</option>
+                  <option value="">Palestra</option>
+                  <option value="">Convenção</option>
+                  <option value="">Conferência</option>
+                  <option value="">Copo d'Água</option>
+                  <option value="">Festa de Formatura</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <textarea placeholder="Descrição" class="form-control" rows="5" required></textarea>
+            </div>
+          </div>
+          <!--==================== Pagamento ====================-->
+          <div class="payment">
+            <a href="#" class="btn payment-btn">
+              Pagar Reserva
             </a>
           </div>
           <div class="submit-section">
-            <button type="submit" class="btn reservar mt-4">Solcitar Reserva</button>
+            <button class="btn reservar mt-4">Solicitar Reserva</button>
           </div>
+          <small class="d-block text-center mt-3">
+            <a href="Index.html">Voltar a página inicial</a>
+          </small>
         </form>
       </div>
     </div>
