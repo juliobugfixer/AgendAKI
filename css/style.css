@@ -17,6 +17,7 @@ html {
 body {
   line-height: 1.7;
   color: gray;
+  margin: 0;
   font-weight: 400;
   font-size: 1rem; 
 }
@@ -1942,7 +1943,7 @@ h1, h2, h3, h4, h5,
 }
 
 .logo img{
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 
@@ -2103,7 +2104,9 @@ h1, h2, h3, h4, h5,
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   /* Cartão de reserva */
@@ -2114,6 +2117,7 @@ h1, h2, h3, h4, h5,
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     max-width: 920px;
     width: 80%;
+    color: #0172af;
     border: 2px solid #0172afae;
   }
 
@@ -2128,8 +2132,9 @@ h1, h2, h3, h4, h5,
   /* Estilo dos campos de input */
   .form-control {
     border-radius: 25px;
-    padding: 12px 10px;
-    margin-bottom: 8px;
+    padding: 3px 10px;
+    margin-top: 0;
+    margin-bottom: 6px;
     font-size: 16px;
     border: 1px solid #0172afae;
     background-color: #fff;
@@ -2150,10 +2155,10 @@ h1, h2, h3, h4, h5,
   .reservar, .payment-btn {
     border-radius: 25px;
     padding: 12px 15px;
-    width: 250px;
+    width: 200px;
     background-color: #0172af;
     border-color: #0172afae; 
-    color: #ffff;
+    color: #ffff !important;
     font-size: 16px;
   }
 
@@ -2161,10 +2166,14 @@ h1, h2, h3, h4, h5,
     background-color: #0172afae;
     border-color: #0172af; 
   }
+  
+  form small a:hover{
+    color: #0172af;
+  }
 
   .payment {
     text-align: right;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   @media (max-width: 576px) {
