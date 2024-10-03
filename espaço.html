@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="Pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cadastrar Espaço | AgendaAKI</title>
+    <!--==================== Links de fontes e estilo ====================-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body style="overflow: hidden;">
+    <!--==================== Seção de Reserva ====================-->
+    <div class="reservation-container">
+      <div class="reservation-card">
+        <div class="logo mb-0 site-logo m-0 p-0">
+          <a href="#" class="mt-0">
+            <img src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <form action="#">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Nome do Espaço" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Nome do Proprietário" required>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" placeholder="Contacto" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Endereço" required>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" placeholder="Valor da Reserva" required>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" placeholder="Preço de alocação" required>
+            </div>
+            <div class="col-md-12">
+              <div>
+                <select class="form-control py-0">
+                  <option value="">Escolha a capacidade de pessoas</option>
+                  <option value="">10-50</option>
+                  <option value="">50-100</option>
+                  <option value="">100-200</option>
+                  <option value="">200-300</option>
+                  <option value="">Mais de 300</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="evento" value="Festa de Aniversário"> Festa de Aniversário</label>
+                <label><input type="checkbox" name="evento" value="Palestra"> Palestra</label>
+                <label><input type="checkbox" name="evento" value="Convenção"> Convenção</label>
+                <label><input type="checkbox" name="evento" value="Conferência"> Conferência</label>
+                <label><input type="checkbox" name="evento" value="Copo d'Água"> Copo d'Água</label>
+                <label><input type="checkbox" name="evento" value="Festa de Formatura"> Festa de Formatura</label>
+                <label><input type="checkbox" name="evento" value="Cursos"> Cursos</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <textarea placeholder="Descreva mais sobre o seu espaço" class="form-control" rows="2" required></textarea>
+            </div>
+          </div>
+          <!--==================== Pagamento ====================-->
+          <div class="submit-section">
+            <button class="btn reservar mt-4">Salvar</button>
+          </div>
+          <small class="d-block text-center mt-3">
+            <a href="index.html">Voltar a página inicial</a>
+          </small>
+        </form>
+      </div>
+    </div>
+
+    <!--====================Seccao Javascript====================-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel | AgendaAKI</title>
+    <link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <div class="d-flex justify-content-between align-items-center px-3">
+                <i id="menu-toggle" class="fas fa-bars"></i>
+            </div>
+            <div class="list-group list-group-flush mt-4">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-calendar"></i>
+                    <span>Reservas</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-wallet"></i>
+                    <span>Pagamentos</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-star"></i>
+                    <span>Avaliações</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-print"></i>
+                    <span>Relatórios</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-door-open"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <header class="bg-primary text-white py-2">
+                <div class="container-fluid d-flex justify-content-end">
+                    <div class="user-info">
+                        <div class="user-name mb-0">Olá, usuario@gmail.com!</div>
+                        <div class="user-photo">
+                            <img src="./images/user-herminio.jpg" alt="User Photo" class="rounded-circle" />
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card text-center text-white bg-primary mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Reservas</h5>
+                                <p class="card-text display-6">100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card text-center text-white bg-primary mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Espaços</h5>
+                                <p class="card-text display-6">50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card text-center text-white bg-primary mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Pagamentos</h5>
+                                <p class="card-text display-6">500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var menuToggle = document.getElementById("menu-toggle");
+        var sidebarWrapper = document.getElementById("sidebar-wrapper");
+
+        menuToggle.onclick = function () {
+            sidebarWrapper.classList.toggle("toggled");
+        };
+    </script>
+</body>
+</html>

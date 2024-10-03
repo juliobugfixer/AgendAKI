@@ -9,10 +9,141 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link  rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/perfil.css">
 </head>
+<style>
+    #sidebar-wrapper {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #0172af;
+        padding-top: 20px;
+        transition: width 0.5s ease;
+        background-image: linear-gradient(to bottom right, #fff #0172afae, #fff);
+    }
+
+    #sidebar-wrapper.toggled {
+        width: 80px;
+    }
+
+    #sidebar-wrapper .list-group-item {
+        color: #fff;
+        background-color: #0172af;
+        border: none;
+        padding-left: 20px;
+        transition: padding 0.5s ease;
+    }
+
+    #sidebar-wrapper .list-group-item:hover {
+        background-color: #fffdfd;
+        color: #0172af;
+        transform: scale(0.9);
+        transition: 0.4s ease-out;
+    }
+
+    #sidebar-wrapper.toggled .list-group-item {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    #sidebar-wrapper .list-group-item i {
+        margin-right: 10px;
+        margin-left: 4px;
+        transition: margin 0.5s ease;
+    }
+
+    #sidebar-wrapper.toggled .list-group-item i {
+        margin-right: 0;
+    }
+
+    #sidebar-wrapper .list-group-item span {
+        transition: opacity 0.3s ease;
+    }
+
+    #sidebar-wrapper.toggled .list-group-item span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #wrapper {
+        display: flex;
+        align-items: stretch;
+    }
+
+    #page-content-wrapper {
+        flex: 1;
+        margin-left: 250px; /* Valor padrão */
+        transition: margin-left 0.3s ease;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-bottom-left-radius: 15px;
+    }
+
+    #sidebar-wrapper.toggled + #page-content-wrapper {
+        margin-left: 80px; /* Ajuste quando o sidebar está comprimido */
+    }
+
+    #menu-toggle {
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.8rem;
+        margin-left: 10px;
+    }
+
+    #menu-toggle:hover {
+        color: #69aacd;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .user-photo img {
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        object-fit: cover;
+    }
+
+    .user-name {
+        display: flex;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .col-md-4 {
+        background-image: linear-gradient(to bottom right, #fff #0172afae, #dee5f5);
+        cursor: pointer;
+    }
+
+    .col-md-4:hover {
+        transform: scale(0.8);
+        transition: 0.6s ease-out;
+    }
+
+    @media (max-width: 768px) {
+        #sidebar-wrapper {
+            width: 180px;
+        }
+
+        #page-content-wrapper {
+            margin-left: 225px;
+        }
+
+        #sidebar-wrapper.toggled .list-group-item span {
+            display: none;
+        }
+
+        .user-name {
+            display: none;
+        }
+    }
+</style>
 <body>
-      <!--====================Sidebar====================-->
     <div id="wrapper">
         <div id="sidebar-wrapper">
             <div class="d-flex justify-content-between align-items-center px-3">
@@ -20,7 +151,7 @@
             </div>
             <div class="list-group list-group-flush mt-4">
                 <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
                     <span>Dashboard</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
@@ -44,13 +175,12 @@
                     <span>Relatórios</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-door-open"></i>
                     <span>Sair</span>
                 </a>
             </div>
         </div>
 
-  <!--==================== Header ====================-->
         <div id="page-content-wrapper">
             <header class="bg-primary text-white py-2">
                 <div class="container-fluid d-flex justify-content-end">
@@ -63,13 +193,12 @@
                 </div>
             </header>
 
-  <!--==================== Cards ====================-->
             <main class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
                         <div class="card text-center text-white bg-primary mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">Total de Reservas</h5>
+                                <h5 class="card-title">Reservas</h5>
                                 <p class="card-text display-6">100</p>
                             </div>
                         </div>
@@ -78,7 +207,7 @@
                     <div class="col-md-4">
                         <div class="card text-center text-white bg-primary mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">Salões Disponíveis</h5>
+                                <h5 class="card-title">Espaços</h5>
                                 <p class="card-text display-6">50</p>
                             </div>
                         </div>
@@ -96,7 +225,7 @@
                     <div class="col-md-4">
                         <div class="card text-center text-white bg-primary mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">Total de Clientes</h5>
+                                <h5 class="card-title">Clientes</h5>
                                 <p class="card-text display-6">200</p>
                             </div>
                         </div>
@@ -104,7 +233,7 @@
                     <div class="col-md-4">
                         <div class="card text-center text-white bg-primary mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">Total de Proprietários</h5>
+                                <h5 class="card-title">Proprietários</h5>
                                 <p class="card-text display-6">30</p>
                             </div>
                         </div>
@@ -112,7 +241,7 @@
                     <div class="col-md-4">
                         <div class="card text-center text-white bg-primary mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">Total de Pagamentos</h5>
+                                <h5 class="card-title">Pagamentos</h5>
                                 <p class="card-text display-6">500</p>
                             </div>
                         </div>
@@ -124,15 +253,12 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-<!--==================== Secao javascript ====================-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var menuToggle = document.getElementById("menu-toggle");
-        var wrapper = document.getElementById("wrapper");
+        var sidebarWrapper = document.getElementById("sidebar-wrapper");
 
         menuToggle.onclick = function () {
-            document.getElementById("sidebar-wrapper").classList.toggle("toggled");
-            wrapper.classList.toggle("toggled");
+            sidebarWrapper.classList.toggle("toggled");
         };
     </script>
 </body>
